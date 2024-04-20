@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Gothan';
+    src: url(assets/fonts/Gotham-Font/GothamBold.ttf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Gothan', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #8253F4;
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.aux {
+    grid-column: 3;
+}
+
+.calculator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px, solid, #fff;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator > button:hover {
+    background-color: #a9a9a9;
+}
+
+.span-dois {
+    grid-column: span 2;
+    background-color: rgba(139, 0, 139, 0.8);
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .antes-operacao {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .depois-operacao {
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+
+
